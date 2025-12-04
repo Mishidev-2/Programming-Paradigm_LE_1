@@ -488,12 +488,12 @@ public class Mission2 {
          GameTools.typeText("(Attempt " + (attempts + 1) + "): ");
          String answer = scanner.nextLine();
          
-         if (GameTools.checkRiddleAnswer(answer, riddle2Keywords)) {
-            GameTools.typeText("Correct! The answer is 'gluttony'.");
+         if (GameTools.checkRiddleAnswer(answer, riddle2Keywords) && attempts == 1) {
+            GameTools.typeText("Correct on 2nd attempt?'.");
 
             secondRiddleSolved = true;
-         }else if(GameTools.checkRiddleAnswer(answer, riddle2Keywords) && attempts == 1){
-            GameTools.typeText("Correct on 2nd attempt?'.");
+         }else if(GameTools.checkRiddleAnswer(answer, riddle2Keywords)){
+            GameTools.typeText("Correct! The answer is 'gluttony'.");
 
             secondRiddleSolved = true;
          
