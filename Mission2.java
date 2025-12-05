@@ -61,63 +61,66 @@ public class Mission2 {
          GameTools.typeText("It is not your task to comfort the condemned, ");GameTools.delay(0.2);
          GameTools.typeText("even if it is a mere child.", 100);GameTools.delay(0.5);
          
-      
-         
          // LChoice 1 - Sin counter increment
          System.out.println();
          GameTools.delay(1);
-         GameTools.typeText("\nChoose...\n");GameTools.delay(0.7);
-         System.out.println("[1] Ignore the Child");
-         System.out.println("[2] Help The Child");
-         System.out.print("Enter choice (1 or 2): ");
+         GameTools.typeText("\nChoose...");
+         GameTools.delay(0.7);
+         GameTools.typeText("\n[1] Ignore the Child");
+         GameTools.delay(0.5);
+         GameTools.typeText("\n[2] Help The Child");
+         GameTools.delay(0.5);
+         GameTools.typeText("\nEnter choice (1 or 2): ");
          String choice = scanner.nextLine();
          System.out.println();
          switch (choice) {
-            case "1"://NOsin
-               GameTools.delay(0.5);
+            case "1" -> {
+                //NOsin
+                GameTools.delay(0.5);
+                
+                GameTools.typeText("The soul continues to cry - ");
+                GameTools.delay(0.5);
+                GameTools.typeText("wandering and lost.\n");GameTools.delay(0.5);
+                GameTools.delay(0.7);
+                
+                GameTools.typeText("It may never find its way...");
+                GameTools.delay(0.5);
+                GameTools.typeText("\n\n");
+                GameTools.delay(1);
+                GameTools.typeText("Forever.", 100);GameTools.delay(0.5);
+              }
             
-               GameTools.typeText("The soul continues to cry - ");
-               GameTools.delay(0.5);
-               GameTools.typeText("wandering and lost.\n");GameTools.delay(0.5);
-               GameTools.delay(0.7);
-            
-               GameTools.typeText("It may never find its way...");
-               GameTools.delay(0.5);
-               GameTools.typeText("\n\n");
-               GameTools.delay(1);
-               GameTools.typeText("Forever.", 100);GameTools.delay(0.5);    
-               break;
-            
-            case "2"://Sinpath
-               GameState.incrementSinCounter();
-               GameTools.delay(0.5);
-            
-               GameTools.typeText("You comfort the child, ");GameTools.delay(0.2);
-               GameTools.typeText("guiding it toward a semblance of peace.\n\n");GameTools.delay(0.5);
-               GameTools.delay(1);
-            
-               GameTools.typeText("As its cries subside, ");GameTools.delay(0.2);
-               GameTools.typeText("a black smoke coalesces from the ground, ");GameTools.delay(0.2);
-               GameTools.typeText("\n");
-               GameTools.typeText("wrapping around the soul and pulling it gently into the depths.");GameTools.delay(0.5);
-            
-               break;
-            default:
-               GameTools.typeText("Invalid choice.");
-               GameTools.delay(0.5);
-               System.out.println();
-               GameTools.typeText("The soul continues to cry - ");
-               GameTools.delay(0.5);
-               GameTools.typeText("wandering and lost.\n");GameTools.delay(0.5);
-               GameTools.delay(0.7);
-            
-               GameTools.typeText("It may never find its way...");
-               GameTools.delay(0.5);
-               GameTools.typeText("\n");
-               GameTools.delay(1);
-               GameTools.typeText("\n");
-               GameTools.delay(1);
-               GameTools.typeText("Forever.", 100);GameTools.delay(0.5);    
+            case "2" -> {
+                //Sinpath
+                GameState.incrementSinCounter();
+                GameTools.delay(0.5);
+                
+                GameTools.typeText("You comfort the child, ");GameTools.delay(0.2);
+                GameTools.typeText("guiding it toward a semblance of peace.\n\n");GameTools.delay(0.5);
+                GameTools.delay(1);
+                
+                GameTools.typeText("As its cries subside, ");GameTools.delay(0.2);
+                GameTools.typeText("a black smoke coalesces from the ground, ");GameTools.delay(0.2);
+                GameTools.typeText("\n");
+                GameTools.typeText("wrapping around the soul and pulling it gently into the depths.");GameTools.delay(0.5);
+              }
+            default -> {
+                GameTools.typeText("Invalid choice.");
+                GameTools.delay(0.5);
+                System.out.println();
+                GameTools.typeText("The soul continues to cry - ");
+                GameTools.delay(0.5);
+                GameTools.typeText("wandering and lost.\n");GameTools.delay(0.5);
+                GameTools.delay(0.7);
+                
+                GameTools.typeText("It may never find its way...");
+                GameTools.delay(0.5);
+                GameTools.typeText("\n");
+                GameTools.delay(1);
+                GameTools.typeText("\n");
+                GameTools.delay(1);
+                GameTools.typeText("Forever.", 100);GameTools.delay(0.5);
+              }
          }         
          GameTools.typeText("\n\nSin counter: " + GameState.getSinCounter());         
       
@@ -309,7 +312,7 @@ public class Mission2 {
       
       // GScene 2
       GameTools.typeText("\n");
-      GameTools.delay(1.5);
+      GameTools.delay(0.7);
    
       GameTools.typeText("Eventually, ");GameTools.delay(0.2);
       GameTools.typeText("you come across a soul. ");GameTools.delay(0.5);
@@ -331,84 +334,83 @@ public class Mission2 {
       GameTools.typeText("voice a wet bubble from the muck.", 100);GameTools.delay(0.5);
       // GChoice 1
       System.out.println();
-      System.out.println();
-   
-      System.out.println("[1] Ignore it");
-      System.out.println("[2] Help the soul");
-      System.out.print("Enter choice (1 or 2): ");
-      
+      GameTools.delay(1);
+      GameTools.typeText("\nChoose...");
+      GameTools.delay(0.7);
+      GameTools.typeText("\n[1] Ignore it");
+      GameTools.delay(0.5);
+      GameTools.typeText("\n[2] Help the soul");
+      GameTools.delay(0.5);
+      GameTools.typeText("\nEnter choice (1 or 2): ");      
       String gChoice = scanner.nextLine();
       switch (gChoice) {
-         case "1":
-            //status effect
-            GameState.setStatusEffectTaint(true);
-            System.out.println();
-            GameTools.delay(0.5);
-         
-            GameTools.typeText("You turn away.");GameTools.delay(0.5);
-            GameTools.typeText(" Its pleas rot into silence.");
-            GameTools.delay(0.7);
-         
-            GameTools.typeText("\nIt reaches to your back,");GameTools.delay(0.3);
-            GameTools.typeText(" pressing a hand against your wings.");
-            GameTools.delay(0.5);
-            GameTools.typeText("\nA searing pain blooms -");GameTools.delay(0.3);
-            GameTools.typeText(" light flaring beneath your ribs.");
-            GameTools.delay(0.5);
-            GameTools.typeText("\nYou feel something burning out from within.");
-            GameTools.delay(0.7);
-         
-            GameTools.typeText("\n\nA brand forms over your heart,");GameTools.delay(0.3);
-            GameTools.typeText(" glowing faintly like molten iron.");
-            GameTools.delay(0.5);
-            GameTools.typeText("\nYour wings wither,");GameTools.delay(0.3);
-            GameTools.typeText(" the feathers blackening,");GameTools.delay(0.3);
-            GameTools.typeText(" eaten by unseen fire.");GameTools.delay(0.7);
-         
-            GameTools.typeText("\n\nStatus effect: ", 100);
-            GameTools.delay(0.3);
-            GameTools.typeText("Wither", 100);   
-            break;
-         case "2":
-            //statuseffect + increment sin
-            GameState.setStatusEffectTaint(true);
-            GameState.incrementSinCounter();
-            System.out.println();
-            GameTools.delay(0.5);
-         
-            GameTools.typeText("You offer a starving soul bread and water,");GameTools.delay(0.3);
-            GameTools.typeText("\nbut they transform into ash and black oil in its mouth.");
-            GameTools.delay(0.7);
-         
-            GameTools.typeText("\n\nThe soul retches,");GameTools.delay(0.3);
-            GameTools.typeText(" spitting black bile,");GameTools.delay(0.3);
-            GameTools.typeText(" and shrieks its condemnation.");
-            GameTools.delay(0.5);
-            GameTools.typeText("\n\n\"Liars!");
-            GameTools.delay(0.5);
-            GameTools.typeText("Demons in light's clothing!");
-            GameTools.typeText("Your mercy is a disease!\"");
-            GameTools.delay(0.7);
-         
-            GameTools.typeText("\n\nThe soul condemns you,");GameTools.delay(0.3);
-            GameTools.typeText(" and its despair lashes out,");
-            GameTools.delay(0.3);
-            GameTools.typeText("\ntainting your wings with an unhealable withering.");
-            GameTools.delay(0.7);
-         
-            GameTools.typeText("\n\nYou do not heal in hell,");GameTools.delay(0.3);
-            GameTools.typeText("\nyou must find a way to suppress the wither or stop it completely.");
-            GameTools.delay(0.7);
-         
-         
-            GameTools.typeText("\n\nStatus effect: ", 100);
-            GameTools.delay(0.3);
-            GameTools.typeText("Wither", 100);   
-         
-         
-            break;
-         default:
-            GameTools.typeText("Invalid choice. Defaulting to option 1.");
+         case "1" -> {
+             //status effect
+             GameState.setStatusEffectTaint(true);
+             System.out.println();
+             GameTools.delay(0.5);
+             
+             GameTools.typeText("You turn away.");GameTools.delay(0.5);
+             GameTools.typeText(" Its pleas rot into silence.");
+             GameTools.delay(0.7);
+             
+             GameTools.typeText("\nIt reaches to your back,");GameTools.delay(0.3);
+             GameTools.typeText(" pressing a hand against your wings.");
+             GameTools.delay(0.5);
+             GameTools.typeText("\nA searing pain blooms -");GameTools.delay(0.3);
+             GameTools.typeText(" light flaring beneath your ribs.");
+             GameTools.delay(0.5);
+             GameTools.typeText("\nYou feel something burning out from within.");
+             GameTools.delay(0.7);
+             
+             GameTools.typeText("\n\nA brand forms over your heart,");GameTools.delay(0.3);
+             GameTools.typeText(" glowing faintly like molten iron.");
+             GameTools.delay(0.5);
+             GameTools.typeText("\nYour wings wither,");GameTools.delay(0.3);
+             GameTools.typeText(" the feathers blackening,");GameTools.delay(0.3);
+             GameTools.typeText(" eaten by unseen fire.");GameTools.delay(0.7);
+             
+             GameTools.typeText("\n\nStatus effect: ", 100);
+             GameTools.delay(0.3);
+             GameTools.typeText("Wither", 100);
+           }
+         case "2" -> {
+             //statuseffect + increment sin
+             GameState.setStatusEffectTaint(true);
+             GameState.incrementSinCounter();
+             System.out.println();
+             GameTools.delay(0.5);
+             
+             GameTools.typeText("You offer a starving soul bread and water,");GameTools.delay(0.3);
+             GameTools.typeText("\nbut they transform into ash and black oil in its mouth.");
+             GameTools.delay(0.7);
+             
+             GameTools.typeText("\n\nThe soul retches,");GameTools.delay(0.3);
+             GameTools.typeText(" spitting black bile,");GameTools.delay(0.3);
+             GameTools.typeText(" and shrieks its condemnation.");
+             GameTools.delay(0.5);
+             GameTools.typeText("\n\n\"Liars!");
+             GameTools.delay(0.5);
+             GameTools.typeText("Demons in light's clothing!");
+             GameTools.typeText("Your mercy is a disease!\"");
+             GameTools.delay(0.7);
+             
+             GameTools.typeText("\n\nThe soul condemns you,");GameTools.delay(0.3);
+             GameTools.typeText(" and its despair lashes out,");
+             GameTools.delay(0.3);
+             GameTools.typeText("\ntainting your wings with an unhealable withering.");
+             GameTools.delay(0.7);
+             
+             GameTools.typeText("\n\nYou do not heal in hell,");GameTools.delay(0.3);
+             GameTools.typeText("\nyou must find a way to suppress the wither or stop it completely.");
+             GameTools.delay(0.7);
+             
+             
+             GameTools.typeText("\n\nStatus effect: ", 100);
+             GameTools.delay(0.3);
+             GameTools.typeText("Wither", 100);
+           }
+         default -> GameTools.typeText("Invalid choice. Defaulting to option 1.");
       }
       
       GameTools.typeText("\n\nSin counter: " + GameState.getSinCounter());
@@ -474,41 +476,104 @@ public class Mission2 {
          GameTools.typeText("chewing the air as if echoing your need.\n\n"); GameTools.delay(0.5);
          GameTools.delay(0.7);
       
-         GameTools.typeText("\"Tell me - \"\n\n"); GameTools.delay(0.5);
+         GameTools.typeText("\"Tell me - \""); GameTools.delay(0.5);
          GameTools.delay(1);
       
 
       while (attempts < 3 && !secondRiddleSolved) {
 
-         GameTools.typeText("\"When a soul feeds on everything yet remains empty, \n"); GameTools.delay(0.3);
-         GameTools.delay(0.7);
-         GameTools.typeText("what sin binds it?\"\n"); GameTools.delay(0.5);
+         GameTools.typeText("\n\n\"When a soul feeds on everything,");
+         GameTools.delay(0.5);
+         GameTools.typeText(" yet remains empty.\"", 70);
+         GameTools.delay(0.5);
+         GameTools.typeText("\n\"What.", 100);
+         GameTools.delay(0.5);
+         GameTools.typeText(" Sin.", 100);
+         GameTools.delay(0.5);
+         GameTools.typeText(" Binds it?", 100);
          GameTools.delay(1);
       
-         GameTools.typeText("(Attempt " + (attempts + 1) + "): ");
+         GameTools.typeText("\n(Attempt " + (attempts + 1) + "): ");
          String answer = scanner.nextLine();
          
          if (GameTools.checkRiddleAnswer(answer, riddle2Keywords) && attempts == 1) {
-            GameTools.typeText("Correct on 2nd attempt?'.");
+            //2nd Attempt correct
+            GameTools.typeText("\nThe gatekeeper nods,");
+            GameTools.delay(0.5);
+            GameTools.typeText("\n\n\"So you know the taste of emptiness.");
+            GameTools.delay(0.5);
+            GameTools.typeText("\nPass through,");
+            GameTools.delay(0.3);
+            GameTools.typeText(" and seek your release.\"", 60);
+            GameTools.delay(1);
 
             secondRiddleSolved = true;
          }else if(GameTools.checkRiddleAnswer(answer, riddle2Keywords)){
-            GameTools.typeText("Correct! The answer is 'gluttony'.");
-
+            //First Attempt correct
+            GameTools.typeText("\nThe Gatekeeper's grin flickers -");
+            GameTools.delay(0.2);
+            GameTools.typeText(" like light reflected in bile.");
+            GameTools.delay(0.5);
+            GameTools.typeText("\n\n\"Yes...", 100);
+            GameTools.delay(0.5);
+            GameTools.typeText(" the endless feast.\"", 60);
+            GameTools.typeText("\n\n\"You understand the craving then.\"");
+            GameTools.delay(0.5);
+            GameTools.typeText("\n\nIt gestures toward the door.");
+            GameTools.delay(0.5);
+            GameTools.typeText("\n\n\"I never promised to hold the cure.\"");
+            GameTools.delay(1);
             secondRiddleSolved = true;
          
          } else {
             attempts++;
-            if (attempts == 1) {
-               GameTools.typeText("1st Attempt failed");
-            }else if(attempts == 2){
-               GameTools.typeText("2nd Attempt failed");
-
-            } else {
-               GameTools.typeText("3rd Attempt Failed You have failed and return to Limbo.");
-               GameState.setSinCounter(0);
-               return false;
-            }
+             switch (attempts) {
+                 case 1 -> {
+                     GameTools.typeText("\n1st Attempt failed");
+                     System.out.println();
+                     GameTools.typeText("\"Wrong.\"");
+                     GameTools.delay(0.5);
+                     GameTools.typeText("\n\nThe gatekeeper snarls.");
+                     GameTools.delay(0.5);
+                     GameTools.typeText("\nThe rot spreads.");
+                     GameTools.delay(0.5);
+                     GameTools.typeText("\n\n\"Try again,");
+                     GameTools.delay(0.3);
+                     GameTools.typeText(" before you are consumed.\"");
+                     GameTools.delay(1);
+                 }
+                 case 2 -> {
+                     GameTools.typeText("\n2nd Attempt failed");
+                     System.out.println();
+                     GameTools.typeText("The gatekeeper laughs,");
+                     GameTools.delay(0.3);
+                     GameTools.typeText(" a sound like grinding bones.");
+                     GameTools.delay(0.5);
+                     GameTools.typeText("\n\n\"Still wrong.");
+                     GameTools.delay(0.5);
+                     GameTools.typeText(" Can you not feel the decay?\"");
+                     GameTools.delay(0.5);
+                     GameTools.typeText("\n\n\"One more failure", 100);
+                     GameTools.delay(0.3);
+                     GameTools.typeText(" and you will join the feasters below.\"", 100);
+                     GameTools.delay(1);
+                 }
+                 default -> {
+                     GameTools.typeText("\n3rd Attempt Failed You have failed and return to Limbo.");
+                     System.out.println();
+                     GameTools.typeText("\"You are empty of mind as well as soul.");
+                     GameTools.delay(0.5);
+                     GameTools.typeText("\nNow,");
+                     GameTools.delay(0.3);
+                     GameTools.typeText(" become one with the feast.\"", 90);
+                     GameTools.delay(0.5);
+                     
+                     GameTools.typeText("\n\nYou wither away and join the Gluttonous in their endless supper.", 70);
+                     GameTools.delay(1);
+                     GameState.setSinCounter(0);
+                     return false;
+                 }
+             }
          }
       }
       

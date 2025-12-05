@@ -17,22 +17,23 @@ public class MainFile {
          String choice = scanner.nextLine();
             
          switch (choice) {
-            case "1":
-                    // New Game: Reset to default and start from Mission 1
-               GameState.resetGame();
-               startNewGame();
-               break;
-            case "2":
-               GameState.resetGame();
-               missionSelect();
-               break;
-            case "3":
-               running = false;
-               GameTools.typeText("Deconceptualizing...");
-               break;
-            default:
-               GameTools.typeText("Invalid option. Please try again.");
-               GameTools.delay(1);
+            case "1" -> {
+                // New Game: Reset to default and start from Mission 1
+                GameState.resetGame();
+                startNewGame();
+              }
+            case "2" -> {
+                GameState.resetGame();
+                missionSelect();
+              }
+            case "3" -> {
+                running = false;
+                GameTools.typeText("Deconceptualizing...");
+              }
+            default -> {
+                GameTools.typeText("Invalid option. Please try again.");
+                GameTools.delay(1);
+              }
          }
       }
       scanner.close();
@@ -67,35 +68,36 @@ public class MainFile {
       String choice = scanner.nextLine();
         
       switch (choice) {
-         case "1":
-                // Mission 1: Only needs name and ifEd3
-            GameState.resetGame();
-            configureMission1State();
-            Mission1.start();
-            break;
-         case "2":
-                // Mission 2: Only needs name
-            configureMission2State();
-            Mission2.start();
-            break;
-         case "3":
-                // Mission 3: Only needs name and sinCount
-            configureMission3State();
-            Mission3.start();
-            break;
-         case "4":
-                // Mission 4: Only needs sinCount, name and, feather status
-            configureMission4State();
-            Mission4.start();
-            break;
-         case "5":
-                // Return to main menu
-            break;
-         default:
-            GameTools.typeText("Invalid mission selection.");
-            GameTools.pressToContinue(scanner);
+         case "1" -> {
+             // Mission 1: Only needs name and ifEd3
+             GameState.resetGame();
+             configureMission1State();
+             Mission1.start();
+           }
+         case "2" -> {
+             // Mission 2: Only needs name
+             configureMission2State();
+             Mission2.start();
+           }
+         case "3" -> {
+             // Mission 3: Only needs name and sinCount
+             configureMission3State();
+             Mission3.start();
+           }
+         case "4" -> {
+             // Mission 4: Only needs sinCount, name and, feather status
+             configureMission4State();
+             Mission4.start();
+           }
+         case "5" -> {
+           }
+         default -> {
+             GameTools.typeText("Invalid mission selection.");
+             GameTools.pressToContinue(scanner);
+           }
       }
-   }
+       // Return to main menu
+          }
     
    private static void configureMission1State() {
       GameTools.clearScreen();
@@ -174,7 +176,7 @@ public class MainFile {
       int sinCount = 0;
       try {
          sinCount = Integer.parseInt(sinInput);
-      } catch (Exception e) {
+      } catch (NumberFormatException e) {
          // Default to 0 if invalid
       }
       if (sinCount < 0 || sinCount > 2) {
@@ -219,7 +221,7 @@ public class MainFile {
       int sinCount = 0;
       try {
          sinCount = Integer.parseInt(sinInput);
-      } catch (Exception e) {
+      } catch (NumberFormatException e) {
         // Default to 0 if invalid
       }
       if (sinCount < 0 || sinCount > 2) {
