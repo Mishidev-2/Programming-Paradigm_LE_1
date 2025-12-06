@@ -107,13 +107,11 @@ public class MainFile {
       GameState.resetGame();
         
         // Set name
-      GameTools.typeText("Enter your name:\n");
-      System.out.print("Name: ");
+      GameTools.typeText("Enter your name: ");
       String name = scanner.nextLine();
       if (!name.trim().isEmpty()) {
          GameState.setPlayerName(name);
-      }
-        
+      }  
         // Set ifEd3
       GameTools.typeText("\nSet ifEd3 status:");
       System.out.println("\n1. ifEd3 = true");
@@ -144,8 +142,8 @@ public class MainFile {
       }
         
         // Mission 2 defaults
-      GameState.setStatusEffectTaint(false); // Mission 2 always has taint active
-      GameState.setIfEd3(false); // Default to false for Mission 2
+      GameState.setStatusEffectTaint(false);
+      GameState.setIfEd3(false); // Default to false for Mission 2 - Useless for M2
         
       GameTools.typeText("\nConfiguration complete!");
       GameTools.typeText("\nName: " + GameState.getPlayerName());
@@ -155,35 +153,41 @@ public class MainFile {
     
    private static void configureMission3State() {
       GameTools.clearScreen();
-      GameTools.typeText("=== MISSION 3 CONFIGURATION ===");
+      GameTools.typeText("=== The Final Circle Config ===\n\n");
     
         // Reset game state first
       GameState.resetGame();
     
         // Set name
-      GameTools.typeText("Enter your name:");
-      System.out.print("Name: ");
+      GameTools.typeText("Enter your name: ");
       String name = scanner.nextLine();
       if (!name.trim().isEmpty()) {
          GameState.setPlayerName(name);
       }
     
-        // Set sin count (0-2) with direct input
-      GameTools.typeText("\nSet sin counter (0 to 2):");
-      System.out.print("Enter sin count (0 - 2): ");
+      // Set sin count (0-2) with direct input
+      GameTools.typeText("\nSet sin counter (0 to 2): ");
       String sinInput = scanner.nextLine();
-   
+
       int sinCount = 0;
+
       try {
-         sinCount = Integer.parseInt(sinInput);
+          sinCount = Integer.parseInt(sinInput);
+          
+          if (sinCount < 0) {
+              System.out.print("\nInput too low: Defaulting to 0\n");
+              sinCount = 0;
+          } else if (sinCount > 2) {
+              System.out.print("\nInput too high: Defaulting to 2\n");
+              sinCount = 2;
+          }
+          //If 1 it chooses 1
       } catch (NumberFormatException e) {
-         // Default to 0 if invalid
+          System.out.print("\nInvalid number: Defaulting to 0\n");
+          sinCount = 0;
       }
-      if (sinCount < 0 || sinCount > 2) {
-         System.out.print("\nInvalid: Defaulting to Zero\n");
-         sinCount = 0;
-      }
-      GameState.setSinCounter(sinCount);
+
+          GameState.setSinCounter(sinCount);
     
         // Mission 3 defaults
       GameState.setStatusEffectTaint(true); // Mission 3 starts with taint active
@@ -191,16 +195,16 @@ public class MainFile {
       GameState.setIfEd3(false); // Default to false for Mission 3
     
       GameTools.typeText("\nConfiguration complete!");
-      GameTools.typeText("Name: " + GameState.getPlayerName());
-      GameTools.typeText("Sin Counter: " + GameState.getSinCounter());
-      GameTools.typeText("Status Effect Taint: " + GameState.hasStatusEffectTaint());
-      GameTools.typeText("Breaking Reality...");
+      GameTools.typeText("\n\nName: " + GameState.getPlayerName());
+      GameTools.typeText("\nSin Counter: " + GameState.getSinCounter());
+      GameTools.typeText("\nStatus Effect Taint: " + GameState.hasStatusEffectTaint());
+      GameTools.typeText("\n\nBreaking Reality...");
       GameTools.delay(2);
    }
     
    private static void configureMission4State() {
       GameTools.clearScreen();
-      GameTools.typeText("=== Last Circle Config ===");
+      GameTools.typeText("=== Cocyutus Config ===");
     
     // Reset game state first
       GameState.resetGame();
