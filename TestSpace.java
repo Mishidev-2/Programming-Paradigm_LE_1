@@ -53,7 +53,7 @@ So, choose: accept both the upgrade and the purge to continue, or refuse and let
             GameTools.typeText("\n[2] \"No. I will accept neither.\"");
             GameTools.delay(25);
             GameTools.typeText("\n[3] \"No. I only want the fruit.\"");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             
             String choice = scanner.nextLine();
 

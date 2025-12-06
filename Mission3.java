@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 public class Mission3 {
     private static Scanner scanner = new Scanner(System.in);
     
@@ -185,29 +186,58 @@ public class Mission3 {
             GameTools.typeText("\n- Status Effect Taint: " + GameState.hasStatusEffectTaint());
             GameTools.typeText("\n- Sin Counter: " + GameState.getSinCounter());
             
+            // 1. Display only the first two options
             GameTools.typeText("\nChoose:");
             GameTools.typeText("\n[1] \"Yes. I will take the feather and the fruit.\"");
             GameTools.typeText("\n[2] \"No. I will accept neither.\"");
-            GameTools.delay(10);
-            GameTools.typeText("\n[3] \"No. I only want the fruit.\"");
             System.out.print("Enter your choice: ");
             
+            // 2. Setup the Thread-Safe Flag
+            // This allows the timer and the main program to talk to each other
+            AtomicBoolean hasAnswered = new AtomicBoolean(false);
+
+            // 3. Create the Timer Thread (15 Seconds)
+            Thread secretTimer = new Thread(() -> {
+                try {
+                    // 15 seconds
+                    Thread.sleep(15000); 
+
+                    // If user hasn't typed yet, show the secret option
+                    if (!hasAnswered.get()) {
+                        GameTools.typeText("\n\n[3] \"No. I only want the fruit.\"");
+                        System.out.print("\nEnter your choice: "); // Re-print prompt
+                    }
+                } catch (InterruptedException e) {
+                    // Thread interrupted (user answered early), do nothing
+                }
+            });
+
+            // Start the timer in the background
+            secretTimer.start();
+
+            // 4. Input
             String choice = scanner.nextLine();
-            
+
+            // 5. Stop timer if answered
+            hasAnswered.set(true);
+            secretTimer.interrupt();
+
             switch (choice) {
                 case "1":
                     handleChoice1();
-                    choiceCompleted = true;
+                    choiceCompleted = true; // Assumes you have this boolean controlling a loop
                     break;
                 case "2":
                     handleChoice2();
                     return; // Return to Mission 1
                 case "3":
-                    choiceCompleted = handleChoice3();
+                    // They can type "3" even before the text appears!
+                    choiceCompleted = handleChoice3(); 
                     break;
                 default:
                     GameTools.typeText("Invalid choice. Please enter 1, 2, or 3.");
-                    GameTools.delay(2);
+                    // Small delay for error message reading
+                    try { Thread.sleep(2000); } catch (InterruptedException e) {} 
             }
         }
         
