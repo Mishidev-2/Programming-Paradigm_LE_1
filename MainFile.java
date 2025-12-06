@@ -39,7 +39,7 @@ public class MainFile {
       scanner.close();
    }
     
-   private static void startNewGame() {
+   public static void startNewGame() {//Public to call on during mission 3
         // Start with Mission 1 and progress through missions naturally
       Mission1.start();
       
@@ -73,16 +73,22 @@ public class MainFile {
              GameState.resetGame();
              configureMission1State();
              Mission1.start();
+             Mission2.start();
+             Mission3.start();
+             Mission4.start();
            }
          case "2" -> {
              // Mission 2: Only needs name
              configureMission2State();
              Mission2.start();
+             Mission3.start();
+             Mission4.start();
            }
          case "3" -> {
              // Mission 3: Only needs name and sinCount
              configureMission3State();
              Mission3.start();
+             Mission4.start();
            }
          case "4" -> {
              // Mission 4: Only needs sinCount, name and, feather status

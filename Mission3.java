@@ -246,36 +246,113 @@ public class Mission3 {
     }
     
     private static void handleChoice1() {
-        GameTools.typeText("\nYou chose the Path of Purity...");
+        GameTools.delay(0.5);
+        System.out.println();
+
+        GameTools.typeText("Satisfied, ");
+        GameTools.delay(0.7);
+        GameTools.typeText("Mephis gives you both. ");
+        GameTools.delay(0.3);
+        GameTools.typeText("\nThe fruit purges you with scorching light ");
+        GameTools.delay(0.7);
+        GameTools.typeText("- the feather offers a comforting, false hope.\n");
+
+        GameTools.delay(0.7);
+
+        GameTools.typeText("You are cleansed,");
+        GameTools.delay(0.3);
+        GameTools.typeText(" but now carry the seed of your own downfall.", 60);
+        GameTools.delay(0.7);
         GameState.setStatusEffectTaint(false);
         GameState.setHasFeather(true); // NOW you get the feather!
-        GameTools.typeText("The taint has been cleansed from your spirit.");
-        GameTools.typeText("A mystical feather materializes and attaches to you.");
-        GameTools.typeText("Status Effect Taint is now: " + GameState.hasStatusEffectTaint());
-        GameTools.typeText("You now have the feather: " + GameState.hasFeather());
+        GameTools.typeText("\n*The taint has been cleansed from your spirit.*");
+        GameTools.typeText("\n*A mystical feather materializes and attaches to you.*");
+
         GameTools.pressToContinue(scanner);
     }
     
     private static void handleChoice2() {
-        GameTools.typeText("\nYou chose the Path of Renewal...");
-        GameTools.typeText("Everything fades to white...");
-        GameTools.typeText("Your journey resets completely.");
-        GameTools.delay(3);
+        GameTools.delay(0.5);
+        System.out.println();
+
+        GameTools.typeText("Mephis gives a slight, respectful nod.");
+        GameTools.delay(0.7);
+
+        GameTools.typeText("\n\n<Mepthis:>");
+        GameTools.delay(0.3);
+        GameTools.typeText("\n\"A pure data point.");
+        GameTools.delay(0.3);
+        GameTools.typeText(" A terminal of absolute principle.");
+        GameTools.delay(0.5);
+        GameTools.typeText(" Admirable.\"");
+        GameTools.delay(0.3);
+
+        GameTools.typeText("\n\nHe steps back ");
+        GameTools.delay(0.5);
+        GameTools.typeText("and dissolves into the haze.");
+        GameTools.delay(0.7);
+
+
+        GameTools.typeText("\n\nYour strength fails you. ");
+        GameTools.delay(0.5);
+        GameTools.typeText("The black taint spreads, ");
+        GameTools.delay(0.3);
+        GameTools.typeText("freezing you from inside out.");
+        GameTools.delay(0.5);
+        GameTools.typeText("\nYou collapse,");
+        GameTools.delay(0.3);
+        GameTools.typeText(" and your light extinguishes...", 60);
+        GameTools.delay(0.5);
         
         // Reset game state and return to Mission 1
         GameState.resetGame();
-        GameTools.typeText("Returning to the beginning...");
+        GameTools.typeText("\n\nDeconceptualizing...", 90);
         GameTools.delay(2);
-        Mission1.start();
+        MainFile.startNewGame();
     }
     
     private static boolean handleChoice3() {//RIDDLEEE
-        GameTools.typeText("\nYou chose the Path of Knowledge...");
-        GameTools.typeText("A mysterious voice speaks: 'Answer my riddle...'");
-        GameTools.typeText("'I am often felt but never seen,");
-        GameTools.typeText("I can paralyze the keen.");
-        GameTools.typeText("I live in questions, not in answers,");
-        GameTools.typeText("And grow in uncertain circumstances.'");
+        GameTools.delay(0.5);
+        System.out.println();
+
+        GameTools.typeText("\"I only want the fruit.\"", 60);
+
+        GameTools.delay(0.7);
+
+        GameTools.typeText("\n\n<Mepthis:>");
+        GameTools.delay(0.3);
+        GameTools.typeText("\n\"Negotiation? ");
+        GameTools.delay(0.3);
+        GameTools.typeText("A mortal concept.");
+        GameTools.delay(0.5);
+        GameTools.typeText("\nYou desire the conclusion without its premise.");
+        GameTools.delay(0.7);
+        GameTools.typeText("\nBut I am a scholar of broken truths,");
+        GameTools.delay(0.3);
+        GameTools.typeText(" and I value intellect."); 
+        GameTools.delay(0.5);
+        GameTools.typeText("\nProve your current logic is sufficient:");
+        GameTools.delay(0.7);
+        GameTools.typeText(" solve a heresy for me.\"\n");
+        GameTools.delay(1.5);
+
+        GameTools.typeText("\n\n\"I am the child of a question that has no sanctioned answer.");
+        GameTools.delay(0.5);
+        GameTools.typeText("\nI am the shadow that falls when a perfect truth is held to the light.");
+        GameTools.delay(0.5);
+
+        GameTools.typeText("\n\nYou can use me to dismantle a fortress of certainty,");
+        GameTools.delay(0.3);
+        GameTools.typeText(" but you will be left with only rubble and sky.", 60);
+        GameTools.delay(0.7);
+        GameTools.typeText("\nYou can follow me to the edge of revelation,");
+        GameTools.delay(0.7);
+        GameTools.typeText(" but I will always point you back to the question.\"", 60);
+
+        GameTools.delay(1.5);
+
+        GameTools.typeText("\n\nWhat am I?", 100);
+        GameTools.delay(1);
         
         String[] riddleKeywords = {"doubt", "uncertainty", "skepticism", "hesitation", "distrust"};
         int attempts = 0;
@@ -288,7 +365,38 @@ public class Mission3 {
             if (GameTools.checkRiddleAnswer(answer, riddleKeywords)) {
                 riddleSolved = true;
                 if (attempts == 0) {
+                    
+                    System.out.println();
                     GameTools.typeText("Correct on first try! Your wisdom shines.");
+                    GameTools.delay(1);
+
+                    GameTools.typeText("Mephis looks genuinely impressed,");
+                    GameTools.delay(0.5);
+                    GameTools.typeText(" and slightly disappointed.");
+
+                    GameTools.delay(1.5);
+
+                    GameTools.typeText("\n\n\"A flawless deduction.", 60);
+                    GameTools.delay(0.7);
+                    GameTools.typeText(" Your core programming is more robust than I anticipated.\"");
+                    GameTools.delay(0.7);
+
+                    GameTools.typeText("\n\nWith a sigh of concession,");
+                    GameTools.delay(0.5);
+                    GameTools.typeText(" he plucks the fruit and tosses it to you.");
+
+                    GameTools.delay(1.5);
+
+                    GameTools.typeText("\n\n\"The purge is yours.");
+                    GameTools.delay(0.5);
+                    GameTools.typeText(" The upgrade...", 100);
+                    GameTools.delay(0.7);
+
+                    GameTools.typeText("\nRemains available,");
+                    GameTools.delay(0.7);
+                    GameTools.typeText(" should you ever change your mind.\"", 70);
+                    GameTools.delay(0.7);
+                    
                     GameState.setStatusEffectTaint(false);
                     // hasFeather remains false (no change)
                     GameTools.typeText("The taint is cleansed but you gain no feather.");
