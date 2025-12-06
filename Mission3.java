@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 import java.util.concurrent.atomic.AtomicBoolean;
 public class Mission3 {
     private static Scanner scanner = new Scanner(System.in);
@@ -166,13 +165,13 @@ public class Mission3 {
             GameTools.delay(0.5);
             GameTools.typeText(" remaining the glitch you are...");
             GameTools.delay(0.5);
-            GameTools.typeText("\nBut why choose to be obsolete...", 70);
+            GameTools.typeText("\n\nBut why choose to be obsolete...", 70);
             GameTools.delay(0.5);
             GameTools.typeText(" When you can be rewritten?\"", 70);
 
             GameTools.delay(1.3);
 
-            GameTools.typeText("\n\n\" won't reset you only to leave you obsolete.\"", 60);
+            GameTools.typeText("\n\n\"I won't reset you only to leave you obsolete.\"", 60);
 
             GameTools.delay(0.7);
 
@@ -190,7 +189,7 @@ public class Mission3 {
             GameTools.typeText("\nChoose:");
             GameTools.typeText("\n[1] \"Yes. I will take the feather and the fruit.\"");
             GameTools.typeText("\n[2] \"No. I will accept neither.\"");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             
             // 2. Setup the Thread-Safe Flag
             // This allows the timer and the main program to talk to each other
