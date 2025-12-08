@@ -656,7 +656,7 @@ public class Endings {
  
         returnToMainMenu();
     }
-    
+    //
     // Reset game state and enable Ed3 for the true ending path
     private static void resetForTrueEnding() {
         // Reset all progress but keep Ed3 enabled

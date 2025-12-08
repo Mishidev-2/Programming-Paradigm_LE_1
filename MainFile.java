@@ -242,7 +242,7 @@ public class MainFile {
          sinCount = 0;
       }
       GameState.setSinCounter(sinCount);
-    
+    //
     // Set feather status
       GameTools.typeText("\nSet feather status:");
       GameTools.typeText("\n[1] Has Feather = true");

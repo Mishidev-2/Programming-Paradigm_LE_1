@@ -219,7 +219,7 @@ public static boolean runMazeGame(Scanner scanner) {
             }
         }
     }
-
+//
     // ==========================================
     // VISUALIZATION
     // ==========================================

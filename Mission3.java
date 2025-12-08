@@ -490,7 +490,7 @@ public class Mission3 {
                 }
             }
         }
-        
+        //
         return true; // Riddle solved, continue Mission 3
     }
 }

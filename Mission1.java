@@ -257,7 +257,7 @@ public class Mission1 {
       GameTools.delay(1);
       GameTools.typeText("Your eyes remain only on the road.", 100);GameTools.delay(0.5);
       
-      
+      //
       
       //GameState.displayState();
       GameTools.pressToContinue(scanner);

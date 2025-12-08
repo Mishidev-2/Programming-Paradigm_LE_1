@@ -572,7 +572,7 @@ public class Mission2 {
                      GameState.setSinCounter(0);
                      return false;
                  }
-             }
+             }//
          }
       }
       
