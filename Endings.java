@@ -245,7 +245,7 @@ public class Endings {
         GameTools.typeText("\n\n\"Behold,\"", 80);
         GameTools.delay(1);
 
-        GameTools.typeText("\n\nMetatron’s voice resonates, a law impressed upon your soul.");
+        GameTools.typeText("\n\nMetatron's voice resonates, a law impressed upon your soul.");
         GameTools.delay(1);
 
         GameTools.typeText("\n\n\"The Celestial Kingdom.\"", 90);
@@ -265,7 +265,7 @@ public class Endings {
         GameTools.delay(1);
         GameTools.typeText("\nWings of conceptual light manifest from your back, humming with the power to maintain a vacant realm.");
         GameTools.delay(1.5);
-        GameTools.typeText("\nMetatron’s voice rings out like a sentencing.");
+        GameTools.typeText("\nMetatron',s voice rings out like a sentencing.");
         GameTools.delay(1);
 
         GameTools.typeText("\n\n\"I baptize you in the name of the Echoing Silence.\"", 80);
@@ -650,7 +650,7 @@ public class Endings {
         GameTools.delay(1);
         GameTools.clearScreen();
         GameTools.delay(2);
-        
+
         GameTools.typeText("ENDING: The Ed3 Revelation");
         GameTools.typeText("===========================");
         GameTools.typeText("With Ed3 activated and a pure heart...");
