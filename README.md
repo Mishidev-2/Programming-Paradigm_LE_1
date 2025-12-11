@@ -18,6 +18,13 @@ Thank you...
 
 ---------------------------------------------------------------------------------------------------------------
 
+How to run the game
+> Open it up, wait for everything to load and run the MainFile
+
+
+
+
+
 About the game:
 
 This has a complete story mode - pretty long, so for quicker progression - set this:
