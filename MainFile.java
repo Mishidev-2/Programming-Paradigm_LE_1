@@ -142,9 +142,11 @@ public class MainFile {
         GameState.resetGame();
         
         GameTools.typeText("Enter your name: ");
-        String name = scanner.nextLine();
-        if (!name.trim().isEmpty()) {
-            GameState.setPlayerName(name);
+        String name = scanner.nextLine().trim();
+        if (name.isEmpty()) {
+            GameState.setPlayerName("Lucifer");
+        } else {
+          GameState.setPlayerName(name);
         }
         
         GameState.setStatusEffectTaint(false);
@@ -160,9 +162,11 @@ public class MainFile {
         GameState.resetGame();
 
         GameTools.typeText("Enter your name: ");
-        String name = scanner.nextLine();
-        if (!name.trim().isEmpty()) {
-            GameState.setPlayerName(name);
+        String name = scanner.nextLine().trim();
+        if (name.isEmpty()) {
+            GameState.setPlayerName("Lucifer");
+        } else {
+          GameState.setPlayerName(name);
         }
 
         int sinCount;
@@ -205,9 +209,11 @@ public class MainFile {
         GameState.resetGame();
 
         GameTools.typeText("Enter your name: ");
-        String name = scanner.nextLine();
-        if (!name.trim().isEmpty()) {
-            GameState.setPlayerName(name);
+        String name = scanner.nextLine().trim();
+        if (name.isEmpty()) {
+            GameState.setPlayerName("Lucifer");
+        } else {
+          GameState.setPlayerName(name);
         }
 
         int sinCount;
@@ -233,12 +239,25 @@ public class MainFile {
             }
         }
 
-        GameTools.typeText("\nSet feather status:");
-        GameTools.typeText("\n[1] Has Feather = true");
-        GameTools.typeText("\n[2] Has Feather = false");
-        System.out.print("\nChoose: ");
-        String featherChoice = scanner.nextLine();
-        GameState.setHasFeather(featherChoice.equals("1"));
+        OUTER:
+        while (true) {
+            GameTools.typeText("\nSet feather status:");
+            GameTools.typeText("\n[1] Has Feather = true");
+            GameTools.typeText("\n[2] Has Feather = false");
+            System.out.print("\nChoose (1 or 2): ");
+            String featherChoice = scanner.nextLine().trim();
+            switch (featherChoice) {
+                case "1" -> {
+                    GameState.setHasFeather(true);
+                    break OUTER; // Valid input, exit loop
+                }
+                case "2" -> {
+                    GameState.setHasFeather(false);
+                    break OUTER; // Valid input, exit loop
+                }
+                default -> System.out.println("Invalid input. Please enter '1' or '2'.");
+            }
+        }
 
         GameState.setStatusEffectTaint(true); 
         
