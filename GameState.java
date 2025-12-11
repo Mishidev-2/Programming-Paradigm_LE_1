@@ -1,6 +1,5 @@
 public class GameState {
 
-
     // USAGE: if (GameState.isNameSet()) { ... }
     private static boolean nameSet = false;
 
@@ -167,10 +166,10 @@ public class GameState {
         hasFeather = false;
     }
 
-    // Display current game state (for debugging)
-    /**
+    
+    /*
     Display all current game state values (for debugging)
-    USAGE: GameState.displayState(); // shows current state in console
+   GameState.displayState();
      */
     public static void displayState() {
         System.out.println("=== CURRENT GAME STATE ===");

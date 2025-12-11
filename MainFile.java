@@ -8,7 +8,6 @@ public class MainFile {
         showMainMenu();
     }
 
-
     public static void showMainMenu() {
       GameTools.showTitleCard(scanner);  
       boolean running = true;

@@ -103,11 +103,21 @@ public class Mission4 {
 
         GameTools.typeText("The angel's head tilts.");
         GameTools.delay(0.5);
+
+        if(GameState.hasFeather()){
         GameTools.typeText("\nThe frozen pools of its eyes fix not on you, ");
         GameTools.delay(0.3);
         GameTools.typeText("but on the faint glow emanating from your possession.");
         GameTools.delay(0.7);
-
+        }
+        else {
+        GameTools.typeText("\nThe frozen pools of its eyes fix not on you, ");
+        GameTools.delay(0.3);
+        GameTools.typeText("but rather,");
+        GameTools.delay(0.3);
+        GameTools.typeText(" beyond you...", 60);
+        GameTools.delay(0.7);  
+        }
         GameTools.typeText("\nThe air grows heavier, ");
         GameTools.delay(0.3);
         GameTools.typeText("if such a thing were possible.", 90);
@@ -125,7 +135,7 @@ public class Mission4 {
         System.out.println();
         GameTools.delay(0.5);  
         
-        GameTools.typeText("Angel(?): ");
+        GameTools.typeText("\nAngel(?): ");
         GameTools.delay(0.5);
 
         GameTools.typeText("\n\"An interesting artifact you carry.");
@@ -233,7 +243,7 @@ public class Mission4 {
     private static void scene4WithoutFeather() {
         System.out.println();
         GameTools.delay(0.5);
-        GameTools.typeText("The angel observes you,");
+        GameTools.typeText("\nThe angel observes you,");
         GameTools.delay(0.3);
         GameTools.typeText(" its head tilted in cold,", 70);
         GameTools.delay(0.3);

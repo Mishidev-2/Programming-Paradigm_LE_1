@@ -71,6 +71,7 @@ public class Endings {
         GameTools.typeText("====== ENDING: THE REAWAKENING ======");
         GameTools.pressToContinue(scanner);
         GameTools.delay(2);
+        returnToMainMenu();
     }
 
     public static void showGoodEnd() {// No feather + NO SIN
@@ -1038,7 +1039,6 @@ public class Endings {
         GameTools.typeText("== TRUE ENDING: SEVERED SOVEREIGN ===");
         GameTools.pressToContinue(scanner);
         GameTools.delay(2);
-
         returnToMainMenu();
     }
 
@@ -1048,7 +1048,7 @@ public class Endings {
         GameState.setSinCounter(0);
         GameState.setHasFeather(false);
         GameState.setIfEd3(true); //enables unnamed
-        GameTools.typeText("Reality reshapes itself around you...");
+        GameTools.typeText("\n\nReality reshapes itself around you...");
         GameTools.delay(2);
         GameTools.clearScreen();
     }
@@ -1057,10 +1057,8 @@ public class Endings {
     private static void returnToMainMenu() {
         GameTools.typeText("\nReturning to main menu...");
         GameTools.delay(2);
-        // This would typically call your main menu method
-        // MainMenu.show();
+        MainFile.showMainMenu();
     }
-
     public static void flashback() {
         GameTools.delay(1);
         GameTools.clearScreen();
@@ -1321,7 +1319,6 @@ public class Endings {
         GameTools.delay(0.3);
         GameTools.typeText(" fatigue rushes over you...");
 
-        GameTools.pressToContinue(scanner);
         GameTools.delay(2);
 
     }

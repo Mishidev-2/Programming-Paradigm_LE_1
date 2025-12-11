@@ -48,7 +48,7 @@ public class GameTools {
     
     // Default speed (30ms)
    public static void typeText(String text) {
-      typeText(text, 1);
+      typeText(text, 30);
    }
     // just change the number for speed in milliseconds
    public static void typeText(String text, int speed) {
@@ -269,7 +269,7 @@ public static boolean runMazeGame(Scanner scanner) {
 
     private static void displayMaze(int[][] maze) {
         clearScreen();
-        System.out.println("===== MAZE OF ETERNAL COLD =====");
+        System.out.println("=== MAZE OF ETERNAL COLD ===");
         
         //Row (i)
         for (int i = 0; i < 9; i++) {

@@ -323,7 +323,7 @@ public class Mission1 {
       if (GameState.isIfEd3()) {
          System.out.println();
          GameTools.typeText("A strange energy pulls you elsewhere...");
-         GameTools.typeText(" The fabric of reality shifts around you...\n");
+         GameTools.typeText(" The fabric of reality shifts around you...\n\n");
          GameTools.delay(2);
       }
         

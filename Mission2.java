@@ -103,7 +103,6 @@ public class Mission2 {
                   GameTools.delay(0.5);
                }
 
-                System.out.println();
                 GameTools.typeText("The soul continues to cry - ");
                 GameTools.delay(0.5);
                 GameTools.typeText("wandering and lost.\n");

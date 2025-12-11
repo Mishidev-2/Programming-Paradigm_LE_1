@@ -8,7 +8,7 @@ public class Unnamed {
         GameTools.clearScreen();
         System.out.println();
         GameTools.typeText("???????????");
-        GameTools.typeText(" UNKNOWN REALM ");
+        GameTools.typeText(" UNKNOWN_REALM ");
         GameTools.typeText("???????????");
         GameTools.delay(3);
         GameTools.clearScreen();
@@ -61,11 +61,11 @@ public class Unnamed {
         GameTools.delay(0.5);
         GameTools.typeText(" Or rather...", 60);
         GameTools.delay(0.5);
-        GameTools.typeText(" There");
+        GameTools.typeText(" There", 40);
         GameTools.delay(0.2);
-        GameTools.typeText(" YOU");
+        GameTools.typeText(" YOU", 50);
         GameTools.delay(0.2);
-        GameTools.typeText(" are.");
+        GameTools.typeText(" are.", 60);
 
         GameTools.delay(0.7);
 

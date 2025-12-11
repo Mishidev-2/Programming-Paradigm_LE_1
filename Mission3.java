@@ -104,7 +104,7 @@ public class Mission3 {
 
         // Choice 1
         System.out.println();
-        GameTools.typeText("<Unknown Demon:> \n");
+        GameTools.typeText("\n<Unknown Demon:> \n");
         GameTools.delay(0.2);
         GameTools.typeText("\"Behold,");
         GameTools.delay(0.3);
@@ -148,7 +148,7 @@ public class Mission3 {
 
         GameTools.typeText("\n\n\"THIS clears the crash.", 60);
         GameTools.delay(0.3);
-        GameTools.typeText("\nA factory reset.");
+        GameTools.typeText(" A factory reset.");
         GameTools.delay(0.5);
         GameTools.typeText("\nIt is 'sufficient' to keep you functioning.\"", 60);
 
@@ -185,9 +185,6 @@ public class Mission3 {
             GameTools.typeText(" and let the corruption terminate you.\"", 60);
 
             GameTools.typeText("\n\n===== CRITICAL CHOICE =====\n\n");
-            GameTools.typeText("Current State:");
-            GameTools.typeText("\n- Status Effect Taint: " + GameState.hasStatusEffectTaint());
-            GameTools.typeText("\n- Sin Counter: " + GameState.getSinCounter());
             
             //2 options first
             GameTools.typeText("\nChoose:");
@@ -274,10 +271,9 @@ public class Mission3 {
         GameTools.delay(0.7);
         GameState.setStatusEffectTaint(false);
         GameState.setHasFeather(true); //feather is true
-        GameTools.typeText("\n*The taint has been cleansed from your spirit.*");
+        GameTools.typeText("\n\n*The taint has been cleansed from your spirit.*");
         GameTools.typeText("\n*A mystical feather materializes and attaches to you.*");
 
-        GameTools.pressToContinue(scanner);
     }
     
     private static void handleChoice2() {
