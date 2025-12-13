@@ -1,87 +1,108 @@
-Contributions:
 
-Idea + Story + Dialogue - Shimizu
-Text Formatting + testing - Shimizu, Calmerin, Cangayda, Gemini Pro
+> Members:
 
-General Framework/flow of game + initial code - Shimizu
+1. Shimizu
+ Contributions: Concept, Story, Dialogue, General Framework, Core Logic, Initial Code
 
-Only used Gemini pro for text formatting + some methods I couldnt figure out such as
-    GameTools.textType();
-    GameTools.displayGlitchEffect();// this one especially
-    GameTools.runMazeGame();
-    the atomic boolean was something new as well
+2. Calmerin
+ Contributions: Text-Formatting, Testing, Suggestions & Feedback.
 
-VS's Github copilot (i think thats what it was) suggestions were used sometimes to make the code more efficient
-But the majority of the code and logic were by a human.
+3. Cangayda
+ Contributions: Text-Formatting, Suggestions & Feedback.
 
-Thank you...
+> Tools & Ai assistance:
 
----------------------------------------------------------------------------------------------------------------
+1. Gemini Pro - Used for text-formatting and specific methods (displayGlitchEffect(), runMazeGame(), AtomicBoolean, and textType)
+2. Github Copilot - Used for code efficiency suggestions and optimizations
 
-How to run the game
-> Open it up, wait for everything to load and run the MainFile
-> PS the colors dont work in jgrasp
+Note: Majority of the game logic, narrative, flow was human generated - AI assitance was only utilized strictly for syntax correction, formatting, and specific utility methods.
 
-About the game:
+> How to run the game
+1. It is recommended to use VScode as that is what was used during development - Jgrasp cannot render the colors properly
 
-This has a complete story mode
-- for pure testingg turn instant text on
-Game has a few gimmicks:
-1. Yes or No Choices
-2. Choice system that increments a counter
-3. Riddles
-4. Maze
-
-It has 6 endings
-1. Bad End - No feather + sin higher than 0
-2. Bad End 2 - Happens if you give the feather to the angel encased in ice
-3. Good End - No feather + no sin
-4. True Good End - Has feather + no sin
-5. True Bad End - Has feather + sin higher than 0
-6. True Ending - Requirement: True Bad End
+Executions steps
+1. Open the files and wait for them to load
+2. Run MainFile.java
 
 
-Files:
-ConsoleColors - colors for the text and dialogue
-MainFile
-- Main menu
-1. New Game - progresses normally, resets gamestates and runs the game from Mission 1
-2. Settings - only setting is the typetext speed being turned to instant
-3. Mission Select
-- resets gamestates
-- allows you to select which mission to start from and set their prerequisites
-4. Quit - quit
+> Core Gameplay and Mechanics
+
+1. Story Mode - COMPLETE narrative experience with 6 endings
+2. Choice System
+    - Yes/No Prompts
+    - Sin counter - choices may increment a "sin" variable
+2. Puzzles
+    - Riddles
+    - Maze
+3. Time Mechanics - No spoilers
 
 
-Mission 1:
-- Contains name
-- Alternative Dialogue if True Bad End is triggered
-- Alternative path if True Bad End is triggered
+> File Structure
+1. Main File 
+ - Contains:
+ a. New Game - Resets gamestate and runs from mission1
+ b. Settings - only setting is InstantText - useful for debugging
+ c. Mission Select - debug tool, could be used to jump into specific missions while setting prerequisites
+ d. Quit - exits
 
-Mission 2:
-- Contains the sin increment choices
-- Contains 2 riddles
+2. Game State
+  - State Manager, stores booleans, counters, getters, and setters
 
-Mission 3:
-- Contains the taint variable which kills the player if not cured for long enough
-- Contains the last riddle
-- Contains the feather which is required for some endings
+3. Game Tools
+ - contains core utility methods
+ 
+4. Console Colors
+ - Library for dialogue colors
 
-Mission 4:
-- Leads to bad end 2 if feather is given to the angel
-- Contains the maze
+5. The Mission Files + Unnamed
+ - Main Content of the game
+
+6. Endings
+ - Stores the Endings
+
+> SPOILERS Mission Content
+
+Mission 1
+- Contains Name Setter
+- Alternative Path and Dialogues if "True Bad End" is triggered
+
+Mission 2
+- Introduction of the sin mechanic, the taint variable, and the first two choices
+
+Mission 3
+-  The final riddle and location of the Feather - a key item
+
+Mission 4
+- Contains the Maze and the critical Angel encased in Ice interaction 
+- Chance for Early Ending (Bad End 2)
 
 Unnamed.java
-- Secret level after unlocking true end
+- A secret level/epilogue accessible only after unlocking the True Ending
 
-Endings:
-- Stores the endings
 
-GameStates
-- Stores the Booleans, setters, getters, and stuff
+> Spoilers Ending Guide
 
-GameTools
-- Stores the methods used such as typeText and delay
+1. Bad End	
+    Feather: NO
+    Sin: > 0
+
+2. Bad End 2
+    Action: Give Feather to Angel in Mission4/Cocyutus
+
+3. Good End
+    Feather: NO
+    Sin: 0
+
+4. True Good End
+    Feather: YES
+    Sin: 0
+
+5. True Bad End - Enables Ed3 for True Ending
+    Feather: YES
+    Sin: > 0
+
+6. True Ending
+    Condition: Only unlocked after triggering True Bad End
 
 
 
