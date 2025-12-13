@@ -5,7 +5,7 @@ public class TestSpace{
       Scanner scanner = new Scanner(System.in);
    
       //Run any method for testing
-      //Hehe
+      //Hehee
 
 
    scanner.close();
