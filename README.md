@@ -41,8 +41,11 @@ Executions steps
 1. Main File 
  - Contains:
  a. New Game - Resets gamestate and runs from mission1
+ 
  b. Settings - only setting is InstantText - useful for debugging
+ 
  c. Mission Select - debug tool, could be used to jump into specific missions while setting prerequisites
+ 
  d. Quit - exits
 
 2. Game State
