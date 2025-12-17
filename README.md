@@ -8,7 +8,7 @@
  Contributions: Text-Formatting, Testing, Suggestions & Feedback.
 
 3. Cangayda
- Contributions: Text-Formatting, Suggestions & Feedback.
+ Contributions: Text-Formatting, Testing, Suggestions & Feedback.
 
 > Tools & Ai assistance:
 
