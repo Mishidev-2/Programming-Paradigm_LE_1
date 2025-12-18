@@ -242,7 +242,7 @@ public static boolean runMazeGame(Scanner scanner) {
 
     private static void displayMaze(int[][] maze) {
         clearScreen();
-        System.out.println(ConsoleColors.CYAN + "=== MAZE OF ETERNAL COLD ===" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.CYAN + "= MAZE OF FROST =" + ConsoleColors.RESET);
         
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {

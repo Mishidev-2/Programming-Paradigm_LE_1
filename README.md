@@ -43,10 +43,12 @@ Execution steps
  a. New Game - Resets gamestate and runs from mission1
  
  b. Settings - Only setting is InstantText - useful for debugging
+
+ c. Message
  
- c. Mission Select - Mostly a debug tool, could be used to jump into specific missions while setting prerequisites
+ d. Mission Select - Mostly a debug tool, could be used to jump into specific missions while setting prerequisites
  
- d. Quit - exits
+ 3. Quit - exits
 
 2. Game State
   - State Manager, stores booleans, counters, getters, and setters
