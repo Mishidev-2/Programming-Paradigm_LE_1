@@ -7,7 +7,6 @@ public class TestSpace{
       //Run any method for testing
       //Hehee
 
-
    scanner.close();
    }
 }
