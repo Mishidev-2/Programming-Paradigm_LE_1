@@ -8,7 +8,7 @@
  Contributions: Text-Formatting, Testing, Suggestions & Feedback.
 
 3. Cangayda
- Contributions: Text-Formatting, Suggestions & Feedback.
+ Contributions: Text-Formatting, Testing, Suggestions & Feedback.
 
 > Tools & Ai assistance:
 
@@ -20,7 +20,7 @@ Note: Majority of the game logic, narrative, flow was human generated - AI assit
 > How to run the game
 1. It is recommended to use VScode as that is what was used during development - Jgrasp cannot render the colors properly
 
-Executions steps
+Execution steps
 1. Open the files and wait for them to load
 2. Run MainFile.java
 
@@ -41,15 +41,18 @@ Executions steps
 1. Main File 
  - Contains:
  a. New Game - Resets gamestate and runs from mission1
- b. Settings - only setting is InstantText - useful for debugging
- c. Mission Select - debug tool, could be used to jump into specific missions while setting prerequisites
+ 
+ b. Settings - Only setting is InstantText - useful for debugging
+ 
+ c. Mission Select - Mostly a debug tool, could be used to jump into specific missions while setting prerequisites
+ 
  d. Quit - exits
 
 2. Game State
   - State Manager, stores booleans, counters, getters, and setters
 
 3. Game Tools
- - contains core utility methods
+ - Contains core utility methods
  
 4. Console Colors
  - Library for dialogue colors
@@ -67,7 +70,7 @@ Mission 1
 - Alternative Path and Dialogues if "True Bad End" is triggered
 
 Mission 2
-- Introduction of the sin mechanic, the taint variable, and the first two choices
+- Introduction of the sin mechanic, the taint variable, and the first two riddles
 
 Mission 3
 -  The final riddle and location of the Feather - a key item
